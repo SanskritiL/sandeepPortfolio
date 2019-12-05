@@ -597,6 +597,7 @@ button:focus {
 	margin-bottom: 15px;
 	padding: 25px 10px;
 	width: 100%;
+	
 }
 
 .mu-service-icon-box {
@@ -619,6 +620,7 @@ button:focus {
 	margin-bottom: 0;
 	color: #555;
 	letter-spacing: 0.5px;
+	height:40px;
 }
 
 
@@ -1216,6 +1218,12 @@ button:focus {
 
 @media (max-width: 640px){
 
+	#particles-js{ 
+		top:30% !important;
+		height:200px !important;
+		
+	}
+
 	#mu-header.mu-fixed-nav {
 		padding: 10px 0;
 	}
@@ -1252,6 +1260,10 @@ button:focus {
 
 
 @media (max-width: 480px) {
+
+	
+
+
 
 	#mu-header {
 		padding: 10px 0;
@@ -1333,6 +1345,7 @@ button:focus {
 
 @media (max-width: 360px){
 
+
 	.mu-featured-slider-content {
 		top: 49%;
 	}
@@ -1390,5 +1403,5 @@ button:focus {
 	position: absolute;
 	top: 50%;
 	width: 100%;
-	height: 400px;
+	height: 420px;
 }
