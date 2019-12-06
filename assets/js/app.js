@@ -7,9 +7,7 @@ $(function() {
 	// Get the messages div.
 	var formMessages = $('#form-messages');
     /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-   particlesJS.load('particles-js', 'assets/particles.json', function() {
-	console.log('callback - particles.js config loaded');
-  });
+   
 	// Set up an event listener for the contact form.
 	$(form).submit(function(e) {
 		// Stop the browser from submitting the form.
