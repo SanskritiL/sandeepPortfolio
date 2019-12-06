@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
     <title>Onlysndp : Home</title>
     <!-- Favicon -->
@@ -20,8 +20,9 @@
     <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
 
     <!-- Main Style -->
-    <link href="style.css" rel="stylesheet">
-
+    
+    <link href="./assets/css/swiper.min.css" type="text/css" rel="stylesheet">
+	<link href="style.css" type="text/css" rel="stylesheet">
     <!-- Fonts -->
 
     <!-- Open Sans for body font -->
@@ -313,7 +314,90 @@
 							
 								<span class="mu-header-dot"></span>
 						   </div>
+						   <div class="swiper-container">
+							<div class="swiper-wrapper">
+							  <div class="swiper-slide">
+								<div class="imgBx">
+									<img src="images/nature1.jpg">
+								</div>
+								<div class="details">
+									<h3>Fighting against cancer</h3>
+									<span>
+										<button onclick="window.open('https://vimeo.com/149457120','_blank')">View</button>
+									</span>
+								</div>
+							  </div>
+							  <div class="swiper-slide">
+									<div class="imgBx">
+										<img src="images/nature2.jpg">
+									</div>
+									<div class="details">
+										<h3>Viel Wenig</h3>
+										<span>
+											<button onclick="window.open('https://vimeo.com/267392275','_blank')">View</button>
+										</span>
+									</div>
+								  </div>
+								  <div class="swiper-slide">
+										<div class="imgBx">
+											<img src="images/nature3.jpg">
+										</div>
+										<div class="details">
+											<h3>Test Room Rules</h3>
+											<span>
+												<button onclick="window.open('https://vimeo.com/353224662','_blank')">View</button>
+											</span>
+										</div>
+									  </div>
+									  <div class="swiper-slide">
+											<div class="imgBx">
+												<img src="images/nature4.jpg">
+											</div>
+											<div class="details">
+												<h3>Reel Animation</h3>
+												<span>
+													<button onclick="window.open('https://vimeo.com/84847063','_blank')">View</button>
+												</span>
+											</div>
+										  </div>
+										  <div class="swiper-slide">
+												<div class="imgBx">
+													<img src="images/nature1.jpg">
+												</div>
+												<div class="details">
+													<h3>Test Room Rules</h3>
+													<span>
+														<button onclick="window.open('http://www.google.com','_blank')">View</button>
+													</span>
+												</div>
+											  </div>
+											  <div class="swiper-slide">
+													<div class="imgBx">
+														<img src="images/nature2.jpg">
+													</div>
+													<div class="details">
+														<h3>Test Room Rules</h3>
+														<span>
+															<button onclick="window.open('http://www.google.com','_blank')">View</button>
+														</span>
+													</div>
+												  </div>
+												  <div class="swiper-slide">
+														<div class="imgBx">
+															<img src="images/nature3.jpg">
+														</div>
+														<div class="details">
+															<h3>Test Room Rules</h3>
+															<span>
+																<button onclick="window.open('http://www.google.com','_blank')">View</button>
+															</span>
+														</div>
+													  </div>
 
+							</div>
+							<!-- Add Pagination -->
+							<div class="swiper-pagination"></div>
+						  </div>
 							
 						
 
@@ -418,7 +502,24 @@
 	
     
    <script src="assets/js/app.js"></script>
-   <script type="text/javascript" src="assets/js/swiper.min.js"></script>
-
+   <script src="assets/js/swiper.min.js"></script>
+ <script>
+	 var swiper = new Swiper('.swiper-container', {
+      effect: 'coverflow',
+      grabCursor: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      coverflowEffect: {
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows : true,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+      },
+    });
+ </script>
   </body>
 </html>
