@@ -314,94 +314,54 @@
 							
 								<span class="mu-header-dot"></span>
 						   </div>
-						   <div class="swiper-container">
-							<div class="swiper-wrapper">
-							  <div class="swiper-slide">
-								<div class="imgBx">
-									<img src="images/nature1.jpg">
-								</div>
-								<div class="details">
-									<h3>Fighting against cancer</h3>
-									<span>
-										<button onclick="window.open('https://vimeo.com/149457120','_blank')">View</button>
-									</span>
-								</div>
-							  </div>
-							  <div class="swiper-slide">
-									<div class="imgBx">
-										<img src="images/nature2.jpg">
-									</div>
-									<div class="details">
-										<h3>Viel Wenig</h3>
-										<span>
-											<button onclick="window.open('https://vimeo.com/267392275','_blank')">View</button>
-										</span>
-									</div>
-								  </div>
-								  <div class="swiper-slide">
-										<div class="imgBx">
-											<img src="images/nature3.jpg">
-										</div>
-										<div class="details">
-											<h3>Test Room Rules</h3>
-											<span>
-												<button onclick="window.open('https://vimeo.com/353224662','_blank')">View</button>
-											</span>
-										</div>
-									  </div>
-									  <div class="swiper-slide">
-											<div class="imgBx">
-												<img src="images/nature4.jpg">
-											</div>
-											<div class="details">
-												<h3>Reel Animation</h3>
-												<span>
-													<button onclick="window.open('https://vimeo.com/84847063','_blank')">View</button>
-												</span>
-											</div>
-										  </div>
-										  <div class="swiper-slide">
-												<div class="imgBx">
-													<img src="images/nature1.jpg">
-												</div>
-												<div class="details">
-													<h3>Test Room Rules</h3>
-													<span>
-														<button onclick="window.open('http://www.google.com','_blank')">View</button>
-													</span>
-												</div>
-											  </div>
-											  <div class="swiper-slide">
-													<div class="imgBx">
-														<img src="images/nature2.jpg">
-													</div>
-													<div class="details">
-														<h3>Test Room Rules</h3>
-														<span>
-															<button onclick="window.open('http://www.google.com','_blank')">View</button>
-														</span>
-													</div>
-												  </div>
-												  <div class="swiper-slide">
-														<div class="imgBx">
-															<img src="images/nature3.jpg">
-														</div>
-														<div class="details">
-															<h3>Test Room Rules</h3>
-															<span>
-																<button onclick="window.open('http://www.google.com','_blank')">View</button>
-															</span>
-														</div>
-													  </div>
-
-							</div>
-							<!-- Add Pagination -->
-							<div class="swiper-pagination"></div>
-						  </div>
-							
-						
-
 						</div>
+						   <div class="swiper-container gallery-top">
+							<div class="swiper-wrapper">
+							  <div class="swiper-slide" >
+								  <img src="images/nature1.jpg"/>
+							  </div>
+							  <div class="swiper-slide" >
+								<img src="images/nature2.jpg"/>
+							  </div>
+							  <div class="swiper-slide" >
+								<img src="images/nature3.jpg"/>
+							  </div>
+							  <div class="swiper-slide" >
+								<img src="images/nature4.jpg"/>
+							  </div>
+							  <div class="swiper-slide" >
+								<img src="images/nature1.jpg"/>
+							  </div>
+							  
+							</div>
+							<!-- Add Arrows -->
+							<div class="swiper-button-next swiper-button-white"></div>
+							<div class="swiper-button-prev swiper-button-white"></div>
+						  </div>
+											
+										
+							
+						  <div class="swiper-container gallery-thumbs">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" >
+									<img src="images/nature1.jpg"/>
+								</div>
+								<div class="swiper-slide" >
+								  <img src="images/nature2.jpg"/>
+								</div>
+								<div class="swiper-slide" >
+								  <img src="images/nature3.jpg"/>
+								</div>
+								<div class="swiper-slide" >
+								  <img src="images/nature4.jpg"/>
+								</div>
+								<div class="swiper-slide" >
+								  <img src="images/nature1.jpg"/>
+								</div>
+							</div>
+						  </div>
+
+						
 					</div>
 				</div>
 			</div>
@@ -504,20 +464,26 @@
    <script src="assets/js/app.js"></script>
    <script src="assets/js/swiper.min.js"></script>
  <script>
-	 var swiper = new Swiper('.swiper-container', {
-      effect: 'coverflow',
-      grabCursor: true,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      coverflowEffect: {
-        rotate: 50,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows : true,
+	 
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 4,
+      loop: true,
+      freeMode: true,
+      loopedSlides: 5, //looped slides should be the same
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    var galleryTop = new Swiper('.gallery-top', {
+      spaceBetween: 10,
+      loop:true,
+      loopedSlides: 5, //looped slides should be the same
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
       },
-      pagination: {
-        el: '.swiper-pagination',
+      thumbs: {
+        swiper: galleryThumbs,
       },
     });
  </script>

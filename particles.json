@@ -1,7 +1,7 @@
 {
     "particles": {
       "number": {
-        "value": 150,
+        "value": 200,
         "density": {
           "enable": true,
           "value_area": 800
@@ -13,7 +13,7 @@
       "shape": {
         "type": "circle",
         "stroke": {
-          "width": 0.4,
+          "width": 0.3,
           "color": "#000000"
         },
         "polygon": {
@@ -95,7 +95,7 @@
           "speed": 3
         },
         "repulse": {
-          "distance": 320,
+          "distance": 100,
           "duration": 0.4
         },
         "push": {
